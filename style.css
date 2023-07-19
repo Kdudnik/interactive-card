@@ -1,0 +1,193 @@
+@import url(./fonts.css);
+
+body /* optional */ {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    height: 100vh;
+    width: 100vw;
+    font-family: "SpaceGrotesk", sans-serif;
+    font-weight: 500;
+    color: #fff;
+}
+
+p {
+    margin: 0;
+}
+
+.container {
+    background-image: url(./images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    max-width: calc(1440px - 32px); /* 32px - containers padding */
+    width: 100%;
+    padding: 16px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 130px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    margin-left: 165px;
+    pointer-events: none;
+}
+
+.card > div {
+    width: 450px;
+    height: 250px;
+    position: relative;
+    display: flex;
+}
+
+.card > div:last-child {
+    margin-left: 100px;
+}
+
+.card img {
+    min-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 15px rgba(0, 0, 0, .5));
+}
+
+.card__front .card__content {
+    padding: 30px;
+    top: 0;
+}
+
+.card__back .card__content {
+    top: 6.3em;
+    right: 3em;
+}
+
+.card__content {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+    justify-content: space-between;
+}
+
+.card__content > * {
+    flex-basis: 100%;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.info .number {
+    font-size: 24px;
+    letter-spacing: 5px;
+}
+
+.info div {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 100%;
+}
+
+.card__content p {
+    font-size: 14px;
+}
+
+.csv {
+    position: absolute;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    color: hsl(278, 68%, 11%);
+    flex-basis: 380px;
+}
+
+.form__row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    flex-basis: 100%;
+}
+
+.form__row > * {
+    flex-basis: 100%;
+}
+
+.form__row.row--double {
+    flex-wrap: nowrap;
+}
+
+.form__row > div {
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form__row > div:first-child input {
+    width: 50px;
+}
+
+label {
+    font-size: 12px;
+}
+
+input {
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid hsl(270, 3%, 87%);
+    color: hsl(278, 68%, 11%);
+    transition: .3s;
+    font-size: 16px;
+}
+
+input:focus-visible {
+    border: 1px solid #63589C;
+    outline: none;
+}
+
+input::placeholder {
+    color: hsl(270, 3%, 87%);
+    font-size: 16px;
+}
+
+.date {
+    display: flex;
+    gap: 10px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.btn {
+    flex-basis: 100%;
+    font-size: 16px;
+    color: #fff;
+    font-family: "SpaceGrotesk", sans-serif;
+    border: 0;
+    border-radius: 10px;
+    background-color: hsl(278, 68%, 11%);
+    padding: 15px 0;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn:hover {
+    background-color: hsl(279, 6%, 55%);
+}
