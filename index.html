@@ -10,6 +10,9 @@
 </head>
 
 <body>
+    <div class="bg-image__wrapper">
+        <img src="./images/bg.png" class="bg-image" alt="background">
+    </div>
     <div class="container">
         <div class="card">
             <div class="card__front">
@@ -37,11 +40,11 @@
             <div class="card__back">
                 <img src="./images/bg-card-back.png" alt="card back side">
                 <div class="card__content">
-                    <p class="cvs" id="showCvs">000</p>
+                    <p class="cvs" id="cvsField">000</p>
                 </div>
             </div>
         </div>
-        <form action="#">
+        <form action="#" data-submitable="true">
             <div class="form__row">
                 <label for="nameInput">CARDHOLDER NAME</label>
                 <input data-error="false" type="text" id="nameInput" placeholder="e.g. Jane Apleseed">
@@ -55,15 +58,15 @@
             <div class="form__row row--double">
                 <div>
                     <label for="date">EXP. DATE (MM/YY)</label>
-                    <div class="date" id="dateWrapper">
+                    <ul class="date" id="dateWrapper">
                         <input data-error="false" type="text" maxlength="2" data-date="month" name="date" placeholder="MM">
                         <input data-error="false" type="text" maxlength="2" data-date="year" name="date" placeholder="YY">
-                    </div>
+                    </ul>
                     <span class="error">Error</span>
                 </div>
                 <div>
                     <label for="cvs">CVS</label>
-                    <input data-error="false" type="number" id="cvs" placeholder="e.g. 123">
+                    <input data-error="false" type="text" maxlength="3" id="cvsInput" placeholder="e.g. 123">
                     <span class="error">Error</span>
                 </div>
             </div>

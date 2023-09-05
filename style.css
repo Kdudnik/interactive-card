@@ -11,22 +11,40 @@ body /* optional */ {
     font-family: "SpaceGrotesk", sans-serif;
     font-weight: 500;
     color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
 }
 
 p {
     margin: 0;
 }
 
+.bg-image__wrapper {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 30%;
+}
+
+.bg-image {
+    min-width: 100%;
+    min-height: 100%;
+}
+
 .container {
-    background-image: url(./images/bg-main-desktop.png);
-    background-repeat: no-repeat;
     max-width: calc(1440px - 32px); /* 32px - containers padding */
     width: 100%;
-    padding: 16px;
+    padding: 0 16px;
     height: 100%;
     display: flex;
     align-items: center;
     gap: 130px;
+    z-index: 1;
 }
 
 .card {
@@ -196,8 +214,41 @@ input[type=number] {
     background-color: hsl(279, 6%, 55%);
 }
 
+.btn.submit--error {
+    background-color: hsl(0, 100%, 66%);;
+}
+
+.btn.submit--error:hover {
+    background-color: hsl(0, 100%, 78%);;
+}
+
 .error {
     color: hsl(0, 100%, 66%);
     font-size: 10px;
     visibility: hidden;
+}
+
+
+/* ANIMATIONS */
+
+@keyframes submitError {
+    0% {
+        transform: translateX(15px);
+    }
+
+    25% {
+        transform: translateX(-25px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    75% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
