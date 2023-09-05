@@ -22,10 +22,14 @@
                             stroke="#fff" />
                     </svg>
                     <div class="info">
-                        <p class="number" id="showNumber">0000 0000 0000 0000</p>
+                        <p class="number" id="cardNumberField">0000 0000 0000 0000</p>
                         <div>
-                            <p id="showName">Jane Apleseed</p>
-                            <p>00/00</p>
+                            <p id="nameField">Jane Apleseed</p>
+                            <p id="dateField">
+                                <span data-date="month">00</span>
+                                /
+                                <span data-date="year">00</span>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -39,21 +43,21 @@
         </div>
         <form action="#">
             <div class="form__row">
-                <label for="name">CARDHOLDER NAME</label>
-                <input data-error="false" type="text" id="name" placeholder="e.g. Jane Apleseed">
+                <label for="nameInput">CARDHOLDER NAME</label>
+                <input data-error="false" type="text" id="nameInput" placeholder="e.g. Jane Apleseed">
                 <span class="error">Error</span>
             </div>
             <div class="form__row">
-                <label for="number">CARD NUMBER</label>
-                <input data-error="false" type="number" id="number" placeholder="e.g. 1234 5678 90 0000">
+                <label for="cardNumberInput">CARD NUMBER</label>
+                <input data-error="false" type="text" maxlength="16" id="cardNumberInput" placeholder="e.g. 1234 5678 90 0000">
                 <span class="error">Error</span>
             </div>
             <div class="form__row row--double">
                 <div>
                     <label for="date">EXP. DATE (MM/YY)</label>
-                    <div class="date">
-                        <input data-error="false" type="number" name="date" placeholder="MM">
-                        <input data-error="false" type="number" name="date" placeholder="YY">
+                    <div class="date" id="dateWrapper">
+                        <input data-error="false" type="text" maxlength="2" data-date="month" name="date" placeholder="MM">
+                        <input data-error="false" type="text" maxlength="2" data-date="year" name="date" placeholder="YY">
                     </div>
                     <span class="error">Error</span>
                 </div>
